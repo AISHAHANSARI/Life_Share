@@ -7,7 +7,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="30dp"
-        tools:context="com.ansari.lifeshare.DonorRecipient.SearchDonor">
+        tools:context=".Common.LoginSignup.BackToSignIn">
 
 
 
@@ -18,7 +18,7 @@
             android:layout_marginTop="-50dp"
             android:fontFamily="@font/acme"
             android:gravity="center"
-            android:text="THANK YOU!"
+            android:text="Please Sign In First"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@android:color/black"
@@ -30,7 +30,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
-            android:src="@drawable/ic_checked" />
+            android:src="@drawable/ic_question_mark" />
 
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/alegreya_sans_medium"
             android:gravity="center"
-            android:text="Registered Successfully \nWe will contact you soon."
+            android:text="Then Register Again"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -51,10 +51,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_gradient"
-            android:onClick="backToHome"
-            android:text="Done"
+            android:onClick="backToLogin"
+            android:text="@string/sign_in"
             android:textColor="@android:color/black"
-             />
+            />
 
 
     </LinearLayout>

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import javax.xml.parsers.FactoryConfigurationError;
 
-public class DonorsFeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.FeaturedViewHolder> {
+public class DonorsFeaturedAdapter extends RecyclerView.Adapter<DonorsFeaturedAdapter.FeaturedViewHolder> {
 
     ArrayList<DonorsFeaturedHelperClass> featuredlocations;
 
@@ -25,15 +25,14 @@ public class DonorsFeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.
 
     @NonNull
     @Override
-    public FeaturedAdapter.FeaturedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FeaturedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.featured_card_design_donors,parent,false);
         FeaturedViewHolder featuredViewHolder = new FeaturedViewHolder(view);
         return featuredViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FeaturedAdapter.FeaturedViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull FeaturedViewHolder holder, int position) {
         DonorsFeaturedHelperClass donorsFeaturedHelperClass = featuredlocations.get(position);
 
         holder.image.setImageResource(donorsFeaturedHelperClass.getImage());
@@ -41,6 +40,7 @@ public class DonorsFeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.
         holder.desc.setText(donorsFeaturedHelperClass.getDescription());
 
     }
+
 
     @Override
     public int getItemCount() {

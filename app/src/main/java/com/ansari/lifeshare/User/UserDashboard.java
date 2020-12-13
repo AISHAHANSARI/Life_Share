@@ -45,7 +45,10 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     RecyclerView featuredRecycler;
     RecyclerView.Adapter adapter;
     Spinner spinnerBldGrp;
-    TextView compatibleBloodGroup;
+    TextView headDonatebg;
+    TextView Donatebg;
+    TextView headReceivebg;
+    TextView Receivebg;
 
     String _bloodgroup = "";
 
@@ -68,7 +71,11 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         menuIcon = findViewById(id.menu_icon);
 
         spinnerBldGrp = findViewById(R.id.spinner_bld_grp);
-        compatibleBloodGroup = findViewById(id.compatible_blood_group);
+
+        headDonatebg = findViewById(id.head_donate_blood_group);
+        Donatebg = findViewById(id.donate_blood_group);
+        headReceivebg = findViewById(id.head_receive_blood_group);
+        Receivebg = findViewById(id.receive_blood_group);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.bloodgroup, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -235,28 +242,52 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     public void checkBloodCompatibility(View view) {
         switch (_bloodgroup){
             case "A+":
-                compatibleBloodGroup.setText("A+,A-,O+,O-");
+                headDonatebg.setText("You Can Donate to :");
+                Donatebg.setText("A+, AB+");
+                headReceivebg.setText("You Can Receive From :");
+                Receivebg.setText("A+, A-, O+, O-");
                 break;
                 case "A-":
-                compatibleBloodGroup.setText("A-,O-");
+                    headDonatebg.setText("You Can Donate to :");
+                    Donatebg.setText("A+, A-, AB+, AB-");
+                    headReceivebg.setText("You Can Receive From :");
+                    Receivebg.setText("A-, O-");
                 break;
                 case "B+":
-                compatibleBloodGroup.setText("B+,B-,O+,O-");
+                    headDonatebg.setText("You Can Donate to :");
+                    Donatebg.setText("B+, AB+");
+                    headReceivebg.setText("You Can Receive From :");
+                    Receivebg.setText("B+, B-, O-, O+");
                 break;
                 case "B-":
-                compatibleBloodGroup.setText("B-,O-");
+                    headDonatebg.setText("You Can Donate to :");
+                    Donatebg.setText("B+, B-, AB+, AB-");
+                    headReceivebg.setText("You Can Receive From :");
+                    Receivebg.setText("B-, O-");
                 break;
                 case "AB+":
-                compatibleBloodGroup.setText("AB+,AB-,O+,O-,B+,B-,A+,A-");
-                break;
+                    headDonatebg.setText("You Can Donate to :");
+                    Donatebg.setText("AB+");
+                    headReceivebg.setText("You Can Receive From :");
+                    Receivebg.setText("EveryOne");
+                    break;
                 case "AB-":
-                compatibleBloodGroup.setText("AB-");
+                    headDonatebg.setText("You Can Donate to :");
+                    Donatebg.setText("AB+, AB-");
+                    headReceivebg.setText("You Can Receive From :");
+                    Receivebg.setText("AB-, A-, B-, O-");
                 break;
                 case "O+":
-                compatibleBloodGroup.setText("O+,O-");
+                    headDonatebg.setText("You Can Donate to :");
+                    Donatebg.setText("O+, A+, B+, AB+");
+                    headReceivebg.setText("You Can Receive From :");
+                    Receivebg.setText("O+, O-");
                 break;
                 case "O-":
-                compatibleBloodGroup.setText("O-");
+                    headDonatebg.setText("You Can Donate to :");
+                    Donatebg.setText("EveryOne");
+                    headReceivebg.setText("You Can Receive From :");
+                    Receivebg.setText("O-");
                 break;
 
         }

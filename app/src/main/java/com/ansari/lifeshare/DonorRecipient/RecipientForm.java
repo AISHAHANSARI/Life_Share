@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.ansari.lifeshare.Common.Database.DonorHelperClass;
 import com.ansari.lifeshare.Common.Database.RecipientHelperClass;
+import com.ansari.lifeshare.Common.LoginSignup.BackToSignIn;
+import com.ansari.lifeshare.Databases.SessionManager;
 import com.ansari.lifeshare.R;
 import com.ansari.lifeshare.User.UserDashboard;
 import com.google.android.material.textfield.TextInputLayout;
@@ -79,7 +81,8 @@ public class RecipientForm extends AppCompatActivity implements AdapterView.OnIt
     }
 
     private void newRecipientData() {
-
+    SessionManager sessionManager = new SessionManager(RecipientForm.this,SessionManager.SESSION_REMEMMBERME);
+    if(sessionManager.checkRememberMe()){
         FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
         DatabaseReference reference = rootNode.getReference("Recipients");
 
@@ -88,6 +91,11 @@ public class RecipientForm extends AppCompatActivity implements AdapterView.OnIt
         Intent intent = new Intent(getApplicationContext(), SearchDonor.class);
         startActivity(intent);
         finish();
+    }else{
+        Intent intent = new Intent(getApplicationContext(), BackToSignIn.class);
+        startActivity(intent);
+        finish();
+    }
     }
 
 

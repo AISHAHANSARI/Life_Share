@@ -13,9 +13,12 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.ansari.lifeshare.Common.LoginSignup.BackToSignIn;
+import com.ansari.lifeshare.Databases.SessionManager;
 import com.ansari.lifeshare.Common.Database.DonorHelperClass;
 import com.ansari.lifeshare.Common.Database.UserHelperClass;
 import com.ansari.lifeshare.R;
+import com.ansari.lifeshare.User.SignIn;
 import com.ansari.lifeshare.User.UserDashboard;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
@@ -116,6 +119,8 @@ public class DonorRegisteration extends AppCompatActivity implements AdapterView
         newDonorData();
     }
     private void newDonorData() {
+        SessionManager sessionManager = new SessionManager(DonorRegisteration.this, SessionManager.SESSION_REMEMMBERME);
+      if (sessionManager.checkRememberMe()){
 
         FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
         DatabaseReference reference = rootNode.getReference("Donors");
@@ -125,6 +130,11 @@ public class DonorRegisteration extends AppCompatActivity implements AdapterView
         Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
         startActivity(intent);
         finish();
+    }else{
+        Intent intent = new Intent(getApplicationContext(), BackToSignIn.class);
+        startActivity(intent);
+        finish();
+      }
     }
 
     @Override

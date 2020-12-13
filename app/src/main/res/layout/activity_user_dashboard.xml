@@ -9,16 +9,15 @@
     tools:openDrawer="start"
     android:id="@+id/drawer_layout">
 
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:id="@+id/navigation_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:background="@color/bannerBackground"-->
-<!--        android:layout_gravity="start"-->
-<!--        app:headerLayout="@layout/menu_header"-->
-<!--        app:menu="@menu/main_menu"-->
-
-<!--        />-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bannerBackground"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/main_menu"
+        />
 
     <LinearLayout
         android:id="@+id/contentView"
@@ -115,7 +114,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <LinearLayout
-                android:id="@+id/btn_check_blood_compatibility_section"
+                android:id="@+id/check_blood_compatibility_section"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/bannerBackground"
@@ -163,11 +162,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/blood_compatibility" />
 
                 <TextView
-                    android:id="@+id/compatible_blood_group"
+                    android:id="@+id/head_donate_blood_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/alegreya_sans_medium"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_bld_grp" />
+
+                <TextView
+                    android:id="@+id/donate_blood_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/alegreya_sans_medium"
                     android:textColor="@color/textcolor1"
@@ -180,11 +191,39 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="Check Blood Compatibility !"
                     android:onClick="checkBloodCompatibility"
-                    app:layout_constraintTop_toBottomOf="@id/compatible_blood_group" />
+                    android:background="@color/colorPrimary"
+                    app:layout_constraintTop_toBottomOf="@id/check_blood_compatibility_section" />
+
+                <TextView
+                    android:id="@+id/head_receive_blood_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/alegreya_sans_medium"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_bld_grp" />
+
+                <TextView
+                    android:id="@+id/receive_blood_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/alegreya_sans_medium"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="24sp"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_bld_grp" />
+
+
             </LinearLayout>
 
 
@@ -251,7 +290,7 @@
                 android:background="@drawable/btn_gradient"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_check_blood_compatibility_section"
+                app:layout_constraintTop_toBottomOf="@+id/check_blood_compatibility_section"
                 android:onClick="goToRecipientForm"/>
 
             <Button
