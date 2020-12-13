@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/cardColor"
+        >
+        <ImageView
+            android:id="@+id/featured_image_donor"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/profile"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/featured_title_donor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aishah Ansari"
+            android:fontFamily="@font/acme"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/featured_desc_donor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Its just a feeling of doing
+            good for the world.The blood we donate is going to help someone in need now or in the future so doing such a good deed feels fulfilling and happy at the same time"
+            android:fontFamily="@font/alegreya_sans_medium"
+            android:textColor="#222121"
+            />
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

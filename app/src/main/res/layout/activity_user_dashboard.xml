@@ -9,16 +9,16 @@
     tools:openDrawer="start"
     android:id="@+id/drawer_layout">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/bannerBackground"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/menu_header"
-        app:menu="@menu/main_menu"
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/navigation_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/bannerBackground"-->
+<!--        android:layout_gravity="start"-->
+<!--        app:headerLayout="@layout/menu_header"-->
+<!--        app:menu="@menu/main_menu"-->
 
-        />
+<!--        />-->
 
     <LinearLayout
         android:id="@+id/contentView"

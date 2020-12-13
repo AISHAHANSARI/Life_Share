@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ansari.lifeshare.DonorRecipient.SearchDonor"></activity>
-        <activity android:name="com.ansari.lifeshare.DonorRecipient.RecipientForm" />
+        <activity android:name=".DonorRecipient.SearchDonor" />
+        <activity android:name=".DonorRecipient.RecipientForm" />
         <activity android:name=".RetailerDashboard" />
-        <activity android:name="com.ansari.lifeshare.DonorRecipient.DonorRegisteration" />
+        <activity android:name=".DonorRecipient.DonorRegisteration" />
         <activity android:name=".demo" />
         <activity android:name=".Common.LoginSignup.ForgetPasswordSuccessMessage" />
         <activity android:name=".Common.LoginSignup.SetNewPassword" />
